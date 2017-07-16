@@ -35,4 +35,23 @@ name = 'Swaroop'
 print ('{} was {} years old when he wrote this book'.format(name,age))
 print ('Why is {} playing with that python?'.format(name))
 # 这是精简数字之后的例子.
+# format 方法所做的事情就是将每个参数值替换至格式所在位置.这之中可以有更详细的格式,例如:
+# 对于浮点数 '0.33' 保留到小数点(.)后三位
+print ('{0:3f}'.format(1.0/3))
+# 使用下划线填充文本,并保持文字处于中间位置
+# 使用(^)定义 '__hello__'字符串的长度为11
+print ('0:_^11'.format('hello'))
+# 基于关键字输出 'Swaroop wrote A Byte of Python'
+print ('{name} wrote {book}'.format(name='Swaroop', book='A byte of Python'))
 
+# print 总会以一个不可见的"新一行"字符(\n)结尾,防止这个情况可以使用end指定其应以空白结尾:
+print('a'.end='\n')
+print('b'.end='\n')
+# 其输出结果为ab
+# 或者通过 end 指定以空格结尾:
+print('a'.end=' ')
+print('b'.end=' ')
+print('c')
+# 其输出结果:a b c
+
+# 转义序列(待续)
